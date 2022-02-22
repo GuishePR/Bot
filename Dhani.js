@@ -1392,28 +1392,28 @@ console.log('Error :', e)
 reply('Failed to add target, maybe because in private')
 }
 break
-case "kick":
-if (!isGroup) return reply(mess.only.group)
-if (!isOwner)
-if (!isGroupAdmins && !mek.key.fromMe && !isOwner) return reply(mess.only.admin)
-if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-if (
-mek.message.extendedTextMessage === undefined ||
-mek.message.extendedTextMessage === null
-)
-return reply("Tag the target you want to kick !");
-mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid;
-if (mentioned.length > 1) {
-Dhani.groupRemove(from, mentioned);
-reply(mess.success);
-} else if (mentioned.length < 1) {
-anu = mek.message.extendedTextMessage.contextInfo.participant;
-Dhani.groupRemove(from, [anu]);
-reply(mess.success);
-} else {
-Dhani.groupRemove(from, mentioned);
-reply(mess.success);
-}
+//case "kick":
+//if (!isGroup) return reply(mess.only.group)
+//if (!isOwner)
+//if (!isGroupAdmins && !mek.key.fromMe && !isOwner) return reply(mess.only.admin)
+//if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+//if (
+//mek.message.extendedTextMessage === undefined ||
+//mek.message.extendedTextMessage === null
+//)
+//return reply("Tag the target you want to kick !");
+//mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid;
+//if (mentioned.length > 1) {
+//Dhani.groupRemove(from, mentioned);
+//reply(mess.success);
+//} else if (mentioned.length < 1) {
+//anu = mek.message.extendedTextMessage.contextInfo.participant;
+//Dhani.groupRemove(from, [anu]);
+//reply(mess.success);
+//} else {
+//Dhani.groupRemove(from, mentioned);
+//reply(mess.success);
+//}
 break;
 case 'tagall':
 if (!isGroup) return reply(mess.only.group)
